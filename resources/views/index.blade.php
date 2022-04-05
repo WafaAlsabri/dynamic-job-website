@@ -1,3 +1,7 @@
+
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -20,7 +24,9 @@
     <title>job website</title>
     <style>
 
-
+.mk{
+  bottom: 177em;
+}
 
 .item{height: 400px;
 }
@@ -108,61 +114,14 @@
 
 <body>
 
-  
+@extends('compenents.header')
+ @section('header')
+ @endsection
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid ">
-      <h3 class="animate-charcter mx-5"> job</h3>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-        <ul class="navbar-nav ">
-          <li class="nav-item me-5">
-            <a class="nav-link active sizee" aria-current="page" href="index.html"><i class="fas fa-home mx-2"></i>Home</a>
-          </li>
-          <li class="nav-item me-5">
-            <a class="nav-link sizee" href="jobs.html" > <i class="fas fa-user-md mx-2"></i>Jobs</a>
-          </li>
-
-          <li class="nav-item me-5">
-            <a class="nav-link sizee"  href="contact.html"><i class="fas fa-id-card-alt mx-2"></i>Contact</a>
-          </li>
-          <li class="nav-item me-5">
-            <a class="nav-link sizee" href="services.html"> <i class="fas fa-user-md mx-2"></i>Services</a>
-          </li><li class="nav-item me-5">
-            <a class="nav-link sizee" href="about.html"><i class="far fa-address-card mx-2"></i>About</a>
-          </li>
-
-          <li class="nav-item dropdown me-5">
-            <a class="nav-link dropdown-toggle sizee" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fas fa-user-circle"></i> Account
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="sidebar.html">profile</a></li>
-              <li><a class="dropdown-item" href="#">Sign up</a></li>
-        
-            </ul>
-          </li>
-          <li class="nav-item me-5">
-            <a class="nav-link sizee" href="cv.html"><i class="fas fa-language mx-2"></i>cv</a>
-          </li>
-          <li class="nav-item me-5">
-            <a class="nav-link sizee" href="clints.html"><i class="fas fa-language mx-2"></i>our partners</a>
-          </li>
-          <li class="nav-item me-5">
-            <a class="nav-link sizee" href="index - Copy.html"><i class="fas fa-language mx-2"></i>English</a>
-          </li>
-         <li class="nav-item " >
-            <a class="nav-link" href="signup.html"><button type="button" class="btn btn-secondary ciz">Sign up</button></a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="signin.html"><button type="button" class="btn btn-secondary ciz">Log in</button></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+ 
+ @extends('compenents.footer')
+ @section('footer')
+ @endsection
      
       
 <!--slider-->
@@ -445,36 +404,7 @@
 
   
 <!--footer-->
-<div class="mt-5 pt-5 pb-5 footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 col-xs-12 about-company">
-        <h2>Heading</h2>
-     
-        <p><a href="#"><i class="fa fa-facebook-square my-5"></i></a><a href="#"><i class="fa fa-linkedin-square mx-3"></i></a></p>
-      </div>
-      <div class="col-lg-3 col-xs-12 links">
-        <h4 class="mt-lg-0 mt-sm-3">Links</h4>
-          <ul class="m-0 p-0">
-            <li>- <a href="#" style="text-decoration: none;">Lorem ipsum</a></li>
-            <li>- <a href="#" style="text-decoration: none;">Nam mauris velit</a></li>
-            <li>- <a href="#" style="text-decoration: none;">Etiam vitae mauris</a></li>
-            <li>- <a href="#" style="text-decoration: none;">Fusce scelerisque</a></li>
-            <li>- <a href="#" style="text-decoration: none;">Sed faucibus</a></li>
-            <li>- <a href="#" style="text-decoration: none;">Mauris efficitur nulla</a></li>
-          </ul>
-      </div>
-      <div class="col-lg-4 col-xs-12 location">
-        <h4 class="mt-lg-0 mt-sm-4">Location</h4>
-        <p >22, Lorem ipsum dolor, consectetur adipiscing</p>
-        <p class="mb-0"><i class="fa fa-phone mx-3"></i>(541) 754-3010</p>
-        <p ><i class="fa fa-envelope-o mx-3"></i>info@hsdf.com</p>
-      </div>
-    </div>
-    <div class="row mt-5">
-     
-    </div>
-  </div>
+
 
   </div>
 
