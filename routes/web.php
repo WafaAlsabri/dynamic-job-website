@@ -16,6 +16,14 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/dashboard', function () {
+    return view('feedback');
+});
+
+Route::get('/add_job', function () {
+    return view('add_job');
+});
+
 Route::get('/about', function () {
     return view('about');
 });
