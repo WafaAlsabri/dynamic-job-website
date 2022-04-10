@@ -27,8 +27,7 @@
     <tr>
     <th>#</th>
       <th>Name</th>
-      <th>addrss</th>
-      <th>Business sector</th>
+     
       <th>operation</th>
     </tr>
   </thead>
@@ -55,15 +54,9 @@
       <td>
       {{$item->name}}
       </td>
-      <td>
-      {{$item->address}}
-      </td>
-      <td>
-      {{$item->sector}}
-      </td>
-      <td>
-     <img src="{{asset('upload/info/' .$item->image)}}"  width="100px;" height="100px;" alt="image" style="boreder-radius:50%;">
-      </td>
+     
+     
+      
       
       <td>
         <button type="button" class="btn btn-link btn-sm btn-rounded">

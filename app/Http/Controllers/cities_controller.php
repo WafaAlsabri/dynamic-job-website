@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\cities;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class cities_controller extends Controller
 {
@@ -10,8 +11,18 @@ class cities_controller extends Controller
         return view('admin.add_city');
            }
     function list(){
-            return view('admin.show_cities');
+        $data=array(
+            'list'=>DB::table('cities')->get()
+            );
+            
+            //$emp=Part::all();
+            
+                return view('admin.show_cities',$data);
+           // return view('admin.show_cities');
                }
+
+
+             
 
 public function store(Request $request){
     $request->validate([
@@ -22,7 +33,7 @@ public function store(Request $request){
        
     ]);
 
-    $student=new Personal_data;
+    $student=new cities;
     $student->name=$request->input('name');
    
     $student->save();
@@ -30,5 +41,12 @@ public function store(Request $request){
 
   //  return view('user.add_info');
 
+}
+
+function delete($id){
+    $delete=DB::table('cities')
+    ->where("id",$id)
+    ->delete();
+    return redirect('show_cities');
 }
 }
