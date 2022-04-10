@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Parthetrs extends Migration
+class Partners extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class Parthetrs extends Migration
      */
     public function up()
     {
-        Schema::create('parthers', function (Blueprint $table) {
+        Schema::create('partners', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('company');
-          
-            $table->string('job');
+            $table->string('address');
+         
+            $table->string('sector');
+            $table->int('num_emp');
+            $table->string('image');
+            $table->timestamps();
          
         });
     }
