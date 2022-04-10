@@ -1,17 +1,24 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\partners;
+use App\Http\Controllers\cities_controller;
+use App\Http\Controllers\Personal_info;
+Route::post('add_job',[partners::class,'add']);
+Route::get('delete/{id}',[partners::class,'delete']);
+Route::get('add_job',[partners::class,'index']);
+Route::get('show_partners',[partners::class,'index1']);
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
+Route::get('add_info',[Personal_info::class,'index']);
+Route::get('show_info',[Personal_info::class,'list']);
+Route::post('add_info',[Personal_info::class,'store']);
+
+Route::get('add_city',[cities_controller::class,'index']);
+Route::get('show_cities',[cities_controller::class,'list']);
+Route::post('add_city',[cities_controller::class,'store']);
+
+
 Route::get('/', function () {
     return view('index');
 });
@@ -20,9 +27,7 @@ Route::get('/dashboard', function () {
     return view('feedback');
 });
 
-Route::get('/add_job', function () {
-    return view('add_job');
-});
+
 
 Route::get('/about', function () {
     return view('about');

@@ -16,11 +16,12 @@
 </head>
 
 <body>
-    @extends('feedback')
-    @section('content')
+    @extends('compenents.sidebar')
+   
+   @section('right')
    
 <div class="container" style="margin-top: 8em;margin-left:6em;" >
-<h1>ADD parteners</h1>
+<h1>ADD personal information</h1>
 <br>
 
 @if(Session::get('success'))
@@ -35,7 +36,7 @@
 </div>
 @endif
 
-<form action="add_job" method="post" enctype="multipart/form-data">
+<form action="add_info" method="post"  enctype="multipart/form-data">
 @csrf
   <div class="mb-3 mt-3">
     <label for="name" class="form-label">Name:</label>
@@ -43,9 +44,9 @@
     <span style="color:red;">@error('name'){{$message}} @enderror</span>
   </div>
   <div class="mb-3">
-    <label for="sector" class="form-label">Business sector:</label>
-    <input type="text" class="form-control" id="sector" placeholder=" Enter Business sector" name=" sector" value="{{old('sector')}}">
-    <span style="color:red;">@error('sector'){{$message}} @enderror</span>
+    <label for="sector" class="form-label">email:</label>
+    <input type="text" class="form-control" id="sector" placeholder=" Enter email" name=" email" value="{{old('email')}}">
+    <span style="color:red;">@error('email'){{$message}} @enderror</span>
   </div>
   <div class="mb-3 ">
     <label for="address" class="form-label">Address:</label>
@@ -56,7 +57,7 @@
 
         <label class="form-label" for="multicol-email">image </label>
         <div class="input-group input-group-merge">
-          <input  name="image" type="file"  class="form-control"  />
+          <input  name="profile" type="file"  class="form-control"  />
           
         </div>
       </div>
