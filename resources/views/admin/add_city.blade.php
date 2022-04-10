@@ -35,7 +35,7 @@
 </div>
 @endif
 
-<form action="add_job" method="post" enctype="multipart/form-data">
+<form action="add_city" method="post" enctype="multipart/form-data">
 @csrf
   <div class="mb-3 mt-3">
     <label for="name" class="form-label">Name:</label>
