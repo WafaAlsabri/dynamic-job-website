@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Partners extends Migration
+class CreateAdsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,24 @@ class Partners extends Migration
      */
     public function up()
     {
-        Schema::create('partners', function (Blueprint $table) {
-            $table->id();
+        Schema::create('ads', function (Blueprint $table) {
+           $table->id();
             $table->string('name');
-            $table->string('address');
-         
-            $table->string('sector');
-            $table->int('num_emp');
+            $table->string('descreption');
+
+
+            $table->unsignedBigInteger('id_partners');
+
+           
+         //   $table->string('sector');
+          //  $table->integer('num_emp');
             $table->string('image');
             $table->timestamps();
-         
+           $table->foreign('id_partners')->references('id')->on('partners');
         });
     }
+    
+
 
     /**
      * Reverse the migrations.
@@ -33,6 +39,6 @@ class Partners extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('ads');
     }
 }
