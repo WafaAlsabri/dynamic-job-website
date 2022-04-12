@@ -37,7 +37,7 @@ public function store(Request $request){
     $student->name=$request->input('name');
    
     $student->save();
-    return redirect()->back()->with('statuse','city added success');
+    return back()->with('success','data have been succufly inserted');
 
   //  return view('user.add_info');
 

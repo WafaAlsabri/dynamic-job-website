@@ -16,6 +16,12 @@ class Part extends Model
         'address',
         'num_emp' ,
         'image',
+        'id_city',
+
 
     ];
+  public function city(){
+
+    return $this->belongsTo(cities::class,'id_city','id');
+  }
 }

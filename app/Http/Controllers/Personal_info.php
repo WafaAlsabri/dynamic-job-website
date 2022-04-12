@@ -37,8 +37,7 @@ public function store(Request $request){
         $student->profile=$filename;
     }
     $student->save();
-    return redirect()->back()->with('statuse','student image added success');
-
+    return back()->with('success','data have been succufly inserted');
   //  return view('user.add_info');
 
 }

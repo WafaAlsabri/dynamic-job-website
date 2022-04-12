@@ -187,7 +187,46 @@
     </div>
   </div>
 
+  @foreach ($cities as $item)
+  <tbody>
+    <tr>
+     <!-- <td>
+        <div class="d-flex align-items-center">
+          <img
+              src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+              alt=""
+              style="width: 45px; height: 45px"
+              class="rounded-circle"
+              />
+          <div class="ms-3">
+            <p class="fw-bold mb-1">John Doe</p>
+            <p class="text-muted mb-0">john.doe@gmail.com</p>
+          </div>
+        </div>
+      </td>-->
+      <td>
+      {{$item->id}}
+      </td>
+      <td>
+      {{$item->name}}
+      </td>
+      <td>
+     <img src="{{asset('upload/info/' .$item->image)}}"  width="100px;" height="100px;" alt="image" style="boreder-radius:50%;">
+      </td>
+     
+      
+      
+      <td>
+        <button type="button" class="btn btn-link btn-sm btn-rounded">
+          Edit
+        </button>
+       <a href="delete/{{$item->id}}">delete</a> 
+      </td>
+    </tr>
   
+  
+    @endforeach
+  </tbody>
 
 
 

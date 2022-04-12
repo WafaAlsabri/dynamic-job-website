@@ -20,7 +20,7 @@
     @section('content')
    
 <div class="container" style="margin-top: 8em;margin-left:6em;" >
-<h1>ADD parteners</h1>
+<h1>ADD Ads</h1>
 <br>
 
 @if(Session::get('success'))
@@ -42,27 +42,23 @@
     <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" value="{{old('name')}}">
     <span style="color:red;">@error('name'){{$message}} @enderror</span>
   </div>
+ 
   <div class="mb-3">
-    <label for="sector" class="form-label">Business sector:</label>
-    <input type="text" class="form-control" id="sector" placeholder=" Enter Business sector" name=" sector" value="{{old('sector')}}">
-    <span style="color:red;">@error('sector'){{$message}} @enderror</span>
-  </div>
-  <div class="mb-3 ">
-    <label for="address" class="form-label">Address:</label>
-    <input type="text" class="form-control" id="address" placeholder="Enter address" name="address" value="{{old('address')}}">
-    <span style="color:red;">@error('address'){{$message}} @enderror</span>
-  </div>
+  <label for="exampleFormControlTextarea1" class="form-label">Descreption</label>
+  <textarea class="form-control" id="" rows="3" name="descreption"></textarea>
+</div>
+ 
 
   <div class="col-md-6 col-12 mb-md-0 mb-3 ps-md-0">
-      <label class="form-label" for="multicol-email">  city</label>
-                    <select  class="form-select item-details mb-2" name="id_city">
+      <label class="form-label" for="multicol-email">  cmpany</label>
+                    <select  class="form-select item-details mb-2" name="id_partners">
+                    @foreach($paerners as $c)
                 
+                <option  value ="{{$c->id}}">{{$c->name}}</option>
+                           
+                                     @endforeach
                 
-                @foreach($cities as $c)
-                
-    <option  value ="{{$c->id}}">{{$c->name}}</option>
-			       	
-                         @endforeach
+        
                
                     </select>
       </div>
@@ -92,11 +88,7 @@
         </div>
       </div>
  
-      <div class="mb-3">
-        <label class="form-label" for="num_emp">Number of employeese </label>
-        <input name="num_emp" type="number" id="num_emp" class="form-control" placeholder="enter number" value="{{old('num_emp')}}"/>
-        <span style="color:red;">@error('num_emp'){{$message}} @enderror</span>
-      </div>
+     
 
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
