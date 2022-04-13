@@ -25,7 +25,8 @@
     <style>
 
 .mk{
-  bottom: 177em;
+  bottom: 160em;
+
 }
 
 .item{height: 400px;
@@ -187,59 +188,23 @@
     </div>
   </div>
 
-  @foreach ($cities as $item)
-  <tbody>
-    <tr>
-     <!-- <td>
-        <div class="d-flex align-items-center">
-          <img
-              src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-              alt=""
-              style="width: 45px; height: 45px"
-              class="rounded-circle"
-              />
-          <div class="ms-3">
-            <p class="fw-bold mb-1">John Doe</p>
-            <p class="text-muted mb-0">john.doe@gmail.com</p>
-          </div>
-        </div>
-      </td>-->
-      <td>
-      {{$item->id}}
-      </td>
-      <td>
-      {{$item->name}}
-      </td>
-      <td>
-     <img src="{{asset('upload/info/' .$item->image)}}"  width="100px;" height="100px;" alt="image" style="boreder-radius:50%;">
-      </td>
-     
-      
-      
-      <td>
-        <button type="button" class="btn btn-link btn-sm btn-rounded">
-          Edit
-        </button>
-       <a href="delete/{{$item->id}}">delete</a> 
-      </td>
-    </tr>
   
-  
-    @endforeach
-  </tbody>
 
+  <div class="row row-cols-1 row-80 row-cols-md-3 g-4 " >
+  @foreach ($ads as $item)
 
-
-  <div class="row row-cols-1 row-80 row-cols-md-3 g-4 py-5  " >
     <div class="col">
       <div class="card">
-        <img src="assets/images/first.webp" class="card-img-top" alt="...">
+    
+  
+
+    <img src="{{asset('upload/info/' .$item->image)}}" width="150em" heigt="1500em" alt="image" style="boreder-radius:50%;">
         <div class="card-body h3">
-          Cocacola
+        {{$item->name}}
         </div>
       </div>
     </div>
-    <div class="col">
+   <!-- <div class="col">
       <div class="card">
         <img src="assets/images/y.jpg" class="card-img-top" alt="...">
         <div class="card-body h3">
@@ -256,48 +221,11 @@
       </div>
     </div>
     
-  </div>
-<!--last jobs-->
-<!--<h1 style="text-align: center;margin-left: 27em;margin-top:2em;margin-bottom:2em;border: 1px solid#000;width: 8em;text-align: center;">Last Jobs</h1>
-<div class="row row-cols-1 row-80 row-cols-md-3 g-4 py-5 justify-content center " >
-  
+  </div>-->
 
-  
-  <div class="card-body">
-    <h5 class="card-title h1"><i class="fas fa-female mx-2"></i>design jobs</h5>
-    <p class="card-text h4">56jobs</p>
-  </div>
+  @endforeach
 
 
-  <div class="card-header"></div>
-  <div class="card-body">
-    <h5 class="card-title h1"><i class="fas fa-user-nurse mx-2"></i>Doctor jobs</h5>
-    <p class="card-text h4">20jobs.</p>
-  </div>
-
-
-  <div class="card-header"></div>
-  <div class="card-body">
-    <h5 class="card-title h1"><i class="fas fa-user-nurse mx-2"></i>Drowing jobs</h5>
-    <p class="card-text h4">15jobs</p>
-  </div>
-
-
-  <div class="card-header"></div>
-  <div class="card-body">
-    <h5 class="card-title h1"><i class="fas fa-user-nurse mx-2"></i>Drowing jobs</h5>
-    <p class="card-text h4">15jobs</p>
-  </div>
-
-
-  <div class="card-header"></div>
-  <div class="card-body">
-    <h5 class="card-title h1"><i class="fas fa-user-nurse mx-2"></i>Drowing jobs</h5>
-    <p class="card-text h4">15jobs</p>
-  </div>
-
-
-</div>-->
 <h1 style="text-align: center;margin-left: 27em;margin-top:2em;margin-bottom:2em;border: 1px solid#000;width: 8em;text-align: center;">Last Jobs</h1>
   <div class="row row-cols-md-2 g-4 row-80">
     <!--div card-->

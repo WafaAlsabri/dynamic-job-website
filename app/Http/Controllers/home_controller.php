@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Part;
 use App\Models\cities;
+use App\Models\ads;
+use App\Models\Personal_data;
+
+
 
 class home_controller extends Controller
 {
@@ -12,8 +16,9 @@ class home_controller extends Controller
        // return view('index');
        return view('index', [
            'cities' => cities::get(),
+           'ads' => ads::get(),
+           
          
-        
         ]);
         
           }
