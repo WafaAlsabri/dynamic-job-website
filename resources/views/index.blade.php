@@ -340,33 +340,18 @@
     <h1 style="text-align: center;margin-left: 27em;margin-top:2em;margin-bottom:2em;border: 1px solid#000;width: 8em;text-align: center;">our partners</h1>
     <div class="container">
         <div class="row">
+
+        @foreach ($partners as $item)
+  
             <div class="col-lg-2 col-md-4 col-6 m-4">
-                <a href="#"><img src="https://www.markuptag.com/images/bluehost-logo.png" class="img-fluid" alt="Bluehost logo"></a>
+                <a href="#"> <img src="{{asset('upload/info/' .$item->image)}}"  width="100px;" height="100px;" alt="image" style="boreder-radius:50%;"></a>
             </div>
-            <div class="col-lg-2 col-md-4 col-6 m-4">
-                <a href="#"><img src="https://www.markuptag.com/images/hostgator-logo.png" class="img-fluid" alt="Hostgator logo"></a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-6 m-4">
-                <a href="#"><img src="https://www.markuptag.com/images/greengeeks-logo.png" class="img-fluid" alt="Green Geeks logo"></a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-6  m-4">
-                <a href="#"><img src="https://www.markuptag.com/images/wordpress-logo.png" class="img-fluid" alt="WordPress logo"></a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-6  m-4">
-                <a href="#"><img src="https://www.markuptag.com/images/dreamhost-logo.png" class="img-fluid" alt="DreamHost logo"></a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-6  m-4">
-                <a href="#"><img src="https://www.markuptag.com/images/hostinger-logo.png" class="img-fluid" alt="Hostinger logo"></a>
-            </div>
+          
         </div>
     </div>
-    <div class="container my-5">
-    
-          
-         
-     
-      </div>
+
   </div>
+  @endforeach
 </section>
 
   
