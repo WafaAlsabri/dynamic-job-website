@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class Auoth_controller extends Controller
 {
@@ -16,7 +19,7 @@ class Auoth_controller extends Controller
         ->get();
         //$user=User::find(1);
         //return response($user);
-        return view('admin.users.list_users')
+        return view('user.list_users')
         ->with('allUsers',$users);
     }
 
@@ -67,7 +70,7 @@ class Auoth_controller extends Controller
     }
 
     public function createUser(){
-        return view('admin.users.create');
+        return view('user.create');
     }
 
     public function register(Request $request){
