@@ -6,6 +6,14 @@ use App\Http\Controllers\cities_controller;
 use App\Http\Controllers\ads_controller;
 use App\Http\Controllers\home_controller;
 use App\Http\Controllers\Personal_info;
+use App\Http\Controllers\Auoth_controller;
+use App\Http\Controllers\SettingsController;
+
+Route::group([
+	'prefix' => LaravelLocalization::setLocale(),
+	'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+],function(){
+
 Route::post('add',[partners::class,'add']);
 Route::get('delete/{id}',[partners::class,'delete']);
 Route::get('add_partners',[partners::class,'index']);
@@ -94,3 +102,16 @@ Route::get('/clints', function () {
     return view('clints');
 });
 
+   
+Route::get('/create_user',[Auoth_controller::class,'createUser'])->name('create_user');
+Route::post('/save_user',[Auoth_controller::class,'register'])->name('save_user');
+Route::get('/show_all_users',[Auoth_controller::class,'listAll'])->name("show_users");
+
+Route::get('/login',[Auoth_controller::class,'showLogin'])->name('login');
+Route::get('/logout',[Auoth_controller::class,'logout'])->name('logout');
+	
+Route::post('/do_login',[Auoth_controller::class,'login'])->name('do_login');
+
+Route::get('/generate_roles',[SettingsController::class,'generateRoles'])->name('generate_roles');
+
+});
