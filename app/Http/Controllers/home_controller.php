@@ -17,6 +17,7 @@ class home_controller extends Controller
        return view('index', [
            'cities' => cities::get(),
            'ads' => ads::get(),
+           'partners' => Part::get(),
            
          
         ]);
